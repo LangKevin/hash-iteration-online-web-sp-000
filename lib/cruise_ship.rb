@@ -8,22 +8,11 @@
 
 def select_winner(passengers)
   # add the code snippet here!
-  def key_for_min_value(hash)
-
-
-    if hash == {}
-      return nil
+  winner = ""
+  passengers.each do |suite, name|
+    if suite == :suite_a && name.start_with?("A")
+      winner = name
     end
-    returnVal = 100000000
-    returnKey = ‘’
-    hash.each do |key, val|
-     #puts "Happy Birthday #{kids_name}! You are now #{age} years old!"
-     if val < returnVal
-       returnVal = val
-       returnKey = :key
-     end
-   end
-     return returnKey
-
   end  
+  winner  
 end
